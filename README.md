@@ -2,6 +2,8 @@
 
 This repository contains my submission for the Composio AI Product Ops take-home assignment. I researched the supplied 100 apps, identified the recurring integration patterns, built a small research runner, and independently reviewed a frozen 20-app sample.
 
+**Live case study:** https://pranav12-byte.github.io/composio-product-ops-research/index.html
+
 ![Case study overview](screenshots/case-study-overview.png)
 
 ![100-app explorer](screenshots/app-explorer.png)
