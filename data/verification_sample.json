@@ -1,0 +1,1493 @@
+{
+  "selection": {
+    "frozen_before_iteration": true,
+    "apps_per_category": 2,
+    "hash_algorithm": "sha256",
+    "hash_seed": "composio-2026",
+    "rule": "One highest-risk record per category, plus one remaining record ranked by SHA-256 of seed:category:id.",
+    "risk_score": "confidence low=3, medium=2, high=1; +2 unknown or partner-gated access; +2 unknown buildability; +1 reported MCP."
+  },
+  "comparison_fields": [
+    "auth_methods",
+    "access_status",
+    "api_types",
+    "api_breadth",
+    "read_capability",
+    "write_capability",
+    "event_capability",
+    "mcp_status",
+    "composio_status",
+    "buildability"
+  ],
+  "records": [
+    {
+      "id": 3,
+      "app": "Pipedrive",
+      "category": "CRM and Sales",
+      "first_pass": {
+        "auth_methods": [
+          "OAuth 2.0",
+          "API token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "ready_now"
+      },
+      "verified": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "self_serve_trial",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "self_serve_trial",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 5,
+      "app": "Twenty",
+      "category": "CRM and Sales",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "REST",
+          "GraphQL",
+          "webhooks"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "graphql",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "api_key",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "graphql",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "api_key",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "graphql",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 15,
+      "app": "Pylon",
+      "category": "Support and Helpdesk",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "REST",
+          "webhooks"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "verified": {
+        "auth_methods": [
+          "bearer_token"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "bearer_token"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 16,
+      "app": "LiveAgent",
+      "category": "Support and Helpdesk",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "REST",
+          "webhooks"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "self_serve_trial",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "api_key",
+          "bearer_token",
+          "oauth2_1"
+        ],
+        "access_status": "self_serve_trial",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "api_key",
+          "bearer_token",
+          "oauth2_1"
+        ],
+        "access_status": "self_serve_trial",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 21,
+      "app": "Slack",
+      "category": "Communications and Messaging",
+      "first_pass": {
+        "auth_methods": [
+          "OAuth 2.0",
+          "bot token",
+          "app-level token"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "REST",
+          "events",
+          "webhooks",
+          "streaming"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "streaming",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook",
+          "websocket"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "streaming",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "ready_now"
+      },
+      "verified": {
+        "auth_methods": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook",
+          "websocket"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "streaming",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook",
+          "websocket"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "streaming",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 25,
+      "app": "Pumble",
+      "category": "Communications and Messaging",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "REST",
+          "webhooks"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "unknown"
+      },
+      "verified": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "webhook"
+        ],
+        "api_breadth": "narrow",
+        "read_capability": "unknown",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "webhook"
+        ],
+        "api_breadth": "narrow",
+        "read_capability": "unknown",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 33,
+      "app": "LinkedIn Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "first_pass": {
+        "auth_methods": [
+          "OAuth 2.0"
+        ],
+        "access_status": "partner_gated",
+        "api_types": [
+          "REST",
+          "webhooks"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "oauth2"
+        ],
+        "access_status": "partner_gated",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "product_ops_required"
+      },
+      "verified": {
+        "auth_methods": [
+          "oauth2"
+        ],
+        "access_status": "partner_gated",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "product_ops_required"
+      },
+      "final": {
+        "auth_methods": [
+          "oauth2"
+        ],
+        "access_status": "partner_gated",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "product_ops_required"
+      }
+    },
+    {
+      "id": 36,
+      "app": "Klaviyo",
+      "category": "Marketing, Ads, Email and Social",
+      "first_pass": {
+        "auth_methods": [
+          "API key",
+          "OAuth 2.0"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "REST API",
+          "webhooks"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "none_found",
+        "composio_status": "existing_toolkit",
+        "buildability": "ready_now"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "api_key",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "ready_now"
+      },
+      "verified": {
+        "auth_methods": [
+          "api_key",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "api_key",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 46,
+      "app": "Squarespace",
+      "category": "Ecommerce",
+      "first_pass": {
+        "auth_methods": [
+          "OAuth 2.0",
+          "API key"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "REST API",
+          "webhooks"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "none_found",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "oauth2"
+        ],
+        "access_status": "partner_gated",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "unknown",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "product_ops_required"
+      },
+      "final": {
+        "auth_methods": [
+          "oauth2"
+        ],
+        "access_status": "partner_gated",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "unknown",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "product_ops_required"
+      }
+    },
+    {
+      "id": 50,
+      "app": "fanbasis",
+      "category": "Ecommerce",
+      "first_pass": {
+        "auth_methods": [],
+        "access_status": "unknown",
+        "api_types": [],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "none_found",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "verified": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "final": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      }
+    },
+    {
+      "id": 52,
+      "app": "SE Ranking",
+      "category": "Data, SEO and Scraping",
+      "first_pass": {
+        "auth_methods": [
+          "API key"
+        ],
+        "access_status": "paid_plan",
+        "api_types": [
+          "REST API"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "none",
+        "mcp_status": "none_found",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "api_key"
+        ],
+        "access_status": "paid_plan",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "none",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "api_key",
+          "oauth2_1"
+        ],
+        "access_status": "self_serve_trial",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      },
+      "final": {
+        "auth_methods": [
+          "api_key",
+          "oauth2_1"
+        ],
+        "access_status": "self_serve_trial",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      }
+    },
+    {
+      "id": 59,
+      "app": "Waterfall.io",
+      "category": "Data, SEO and Scraping",
+      "first_pass": {
+        "auth_methods": [],
+        "access_status": "unknown",
+        "api_types": [],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "none_found",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "verified": {
+        "auth_methods": [
+          "api_key"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "api_key"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 63,
+      "app": "Netlify",
+      "category": "Developer, Infra and Data platforms",
+      "first_pass": {
+        "auth_methods": [
+          "Bearer token",
+          "OAuth 2.0"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "REST API",
+          "webhooks"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "none_found",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "bearer_token",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      },
+      "verified": {
+        "auth_methods": [
+          "personal_access_token",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      },
+      "final": {
+        "auth_methods": [
+          "personal_access_token",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      }
+    },
+    {
+      "id": 68,
+      "app": "MongoDB Atlas",
+      "category": "Developer, Infra and Data platforms",
+      "first_pass": {
+        "auth_methods": [
+          "public/private API key",
+          "OAuth 2.0",
+          "SCRAM"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "REST API",
+          "MongoDB wire protocol",
+          "webhooks"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "api_key",
+          "database_credentials",
+          "oauth2"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "database_protocol",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      },
+      "verified": {
+        "auth_methods": [
+          "service_account",
+          "digest_auth",
+          "database_credentials"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "database_protocol"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      },
+      "final": {
+        "auth_methods": [
+          "service_account",
+          "digest_auth",
+          "database_credentials"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "database_protocol"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "unknown",
+        "buildability": "ready_now"
+      }
+    },
+    {
+      "id": 71,
+      "app": "Notion",
+      "category": "Productivity and Project Management",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "REST"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "none_found",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "oauth2",
+          "bearer_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "oauth2",
+          "bearer_token",
+          "personal_access_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "oauth2",
+          "bearer_token",
+          "personal_access_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 78,
+      "app": "Coda",
+      "category": "Productivity and Project Management",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "REST"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "none_found",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "oauth2",
+          "personal_access_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "oauth2",
+          "personal_access_token"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 84,
+      "app": "Paygent Connect",
+      "category": "Finance and Fintech",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "none_found",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "verified": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "final": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      }
+    },
+    {
+      "id": 88,
+      "app": "Brex",
+      "category": "Finance and Fintech",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "REST"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "none_found",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "partner_gated",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "admin_approval",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "final": {
+        "auth_methods": [
+          "oauth2",
+          "api_key"
+        ],
+        "access_status": "admin_approval",
+        "api_types": [
+          "rest",
+          "webhook"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      }
+    },
+    {
+      "id": 95,
+      "app": "Reducto",
+      "category": "AI, Research and Media-native",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "paid_plan",
+        "api_types": [
+          "REST"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "none_found",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "api_key"
+        ],
+        "access_status": "paid_plan",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "moderate",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "existing_toolkit",
+        "buildability": "buildable_with_caveat"
+      },
+      "verified": {
+        "auth_methods": [
+          "api_key"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "ready_now"
+      },
+      "final": {
+        "auth_methods": [
+          "api_key"
+        ],
+        "access_status": "self_serve_free",
+        "api_types": [
+          "rest"
+        ],
+        "api_breadth": "broad",
+        "read_capability": "yes",
+        "write_capability": "yes",
+        "event_capability": "webhook",
+        "mcp_status": "official",
+        "composio_status": "existing_toolkit",
+        "buildability": "ready_now"
+      }
+    },
+    {
+      "id": 99,
+      "app": "YouTube Transcript",
+      "category": "AI, Research and Media-native",
+      "first_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "none_found",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "second_pass": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "verified": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      },
+      "final": {
+        "auth_methods": [
+          "unknown"
+        ],
+        "access_status": "unknown",
+        "api_types": [
+          "unknown"
+        ],
+        "api_breadth": "unknown",
+        "read_capability": "unknown",
+        "write_capability": "unknown",
+        "event_capability": "unknown",
+        "mcp_status": "unknown",
+        "composio_status": "unknown",
+        "buildability": "unknown"
+      }
+    }
+  ]
+}

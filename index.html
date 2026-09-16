@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An evidence-led audit of 100 requested app integrations for Composio.">
+  <title>100 App Integration Readiness Audit</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101528'/%3E%3Cpath d='M18 32h28M32 18v28' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Back to top">Integration Readiness Audit</a>
+    <nav aria-label="Page sections">
+      <a href="#findings">Findings</a>
+      <a href="#explorer">100 apps</a>
+      <a href="#verification">Verification</a>
+      <a href="#workflow">Process</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <p class="eyebrow">Composio AI Product Ops take-home</p>
+      <h1>API access is common. Production readiness is the constraint.</h1>
+      <p class="hero-copy">I researched 100 requested apps to understand which ones could become useful agent tools today, which ones need Product Ops work, and what repeatedly gets in the way. I found that discovering an API is usually the easy part. Credential access, approval gates, incomplete event coverage, and the operational quality of the integration determine whether it is actually ready to ship.</p>
+      <div class="metrics" aria-label="Key results">
+        <article><strong>100</strong><span>apps across 10 categories</span></article>
+        <article><strong>76</strong><span>ready now or buildable with caveats</span></article>
+        <article><strong>70</strong><span>offer a self-serve access path</span></article>
+        <article><strong>20</strong><span>apps independently reviewed</span></article>
+      </div>
+      <p class="source-note">The final dataset contains 408 evidence entries classified as official source types. Research was checked on 16 and 17 September 2026.</p>
+    </section>
+
+    <section id="findings" class="section shell">
+      <div class="section-heading">
+        <p class="eyebrow">What I found</p>
+        <h2>The integration decision is operational, not binary.</h2>
+      </div>
+      <div class="insight-grid">
+        <article class="insight">
+          <span class="number">01</span>
+          <h3>Self-serve does not mean ready</h3>
+          <p>Seventy apps provide free or trial access, but only 33 reached a ready-now verdict. Another 43 are technically buildable but still carry meaningful caveats around scopes, plans, events, or implementation quality.</p>
+        </article>
+        <article class="insight">
+          <span class="number">02</span>
+          <h3>The best route starts with existing leverage</h3>
+          <p>Fifty apps already have a Composio toolkit. I would check the catalog first, verify that the required action exists, then use an official MCP, authenticated proxy, or new toolkit only when the existing path is insufficient.</p>
+        </article>
+        <article class="insight">
+          <span class="number">03</span>
+          <h3>MCP is a route, not proof of readiness</h3>
+          <p>I found 12 official MCPs. An MCP can shorten integration work, but it does not remove the need to verify authentication, scopes, tool quality, reliability, and ownership.</p>
+        </article>
+      </div>
+
+      <div class="decision-callout">
+        <div>
+          <p class="eyebrow">Where I would focus first</p>
+          <h3>Developer infrastructure and support have the clearest near-term wins.</h3>
+        </div>
+        <p>Both categories contain six ready-now apps. Finance has no ready-now verdicts in this audit, while all ten productivity apps remain buildable with caveats. That suggests a portfolio strategy: ship repeatable, self-serve categories first, while routing commercial and approval-heavy integrations through Product Ops.</p>
+      </div>
+
+      <div class="matrix-wrap">
+        <div class="matrix-header">
+          <div>
+            <p class="eyebrow">Category matrix</p>
+            <h3>Readiness across the ten categories</h3>
+          </div>
+          <p>Every row contains ten apps.</p>
+        </div>
+        <div id="category-matrix" class="category-matrix" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="explorer" class="section section-muted">
+      <div class="shell">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">The research set</p>
+            <h2>All 100 app decisions, with evidence.</h2>
+          </div>
+          <p>I kept unknown as a valid answer when the available evidence was not strong enough. Select an app to see its blocker and supporting sources.</p>
+        </div>
+
+        <div class="filters" aria-label="Filter the app research">
+          <label>
+            <span>Search</span>
+            <input id="search" type="search" placeholder="Search app or blocker">
+          </label>
+          <label>
+            <span>Category</span>
+            <select id="category-filter"><option value="">All categories</option></select>
+          </label>
+          <label>
+            <span>Buildability</span>
+            <select id="buildability-filter">
+              <option value="">All verdicts</option>
+              <option value="ready_now">Ready now</option>
+              <option value="buildable_with_caveat">Buildable with caveat</option>
+              <option value="product_ops_required">Product Ops required</option>
+              <option value="unknown">Unknown</option>
+            </select>
+          </label>
+          <label>
+            <span>Access</span>
+            <select id="access-filter">
+              <option value="">All access paths</option>
+              <option value="self_serve_free">Self-serve free</option>
+              <option value="self_serve_trial">Self-serve trial</option>
+              <option value="paid_plan">Paid plan</option>
+              <option value="admin_approval">Admin approval</option>
+              <option value="partner_gated">Partner gated</option>
+              <option value="unknown">Unknown</option>
+            </select>
+          </label>
+        </div>
+
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>App</th>
+                <th>Category</th>
+                <th>Access</th>
+                <th>API and MCP</th>
+                <th>Verdict</th>
+                <th>Evidence</th>
+              </tr>
+            </thead>
+            <tbody id="app-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="verification" class="section shell">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">Verification</p>
+          <h2>I measured the agent before trusting the output.</h2>
+        </div>
+        <p>I froze the review sample before changing the prompt, then used the same 20 apps across both iterations. This kept the comparison stable.</p>
+      </div>
+
+      <div class="accuracy-panel">
+        <div class="accuracy-track" aria-label="Accuracy improvement">
+          <div class="accuracy-step">
+            <span>Initial exact-schema agreement</span>
+            <strong>48.5%</strong>
+            <div class="bar"><i style="width:48.5%"></i></div>
+            <small>97 of 200 field checks</small>
+          </div>
+          <div class="accuracy-step">
+            <span>Conservative normalized baseline</span>
+            <strong>53.5%</strong>
+            <div class="bar"><i style="width:53.5%"></i></div>
+            <small>Formatting aliases normalized</small>
+          </div>
+          <div class="accuracy-step emphasis">
+            <span>Second-pass exact agreement</span>
+            <strong>69.0%</strong>
+            <div class="bar"><i style="width:69%"></i></div>
+            <small>138 of 200 field checks</small>
+          </div>
+        </div>
+
+        <div class="verification-copy">
+          <p>I selected two apps from each category. One was the highest-risk record and one was chosen with a reproducible hash. A separate official-source review then checked ten material fields per app, giving me 200 comparisons.</p>
+          <p>The first pass mixed factual gaps with inconsistent labels such as “REST API” and “rest”. I therefore report both the raw exact-schema score and a conservative normalized baseline. I then constrained the taxonomy, required evidence for every material field, separated “not found” from “unknown”, and strengthened the checks for official MCPs and Composio coverage. On the identical frozen sample, exact agreement improved by 20.5 percentage points.</p>
+          <p>Authentication, MCP status, and buildability remained the weakest decisions. These are the fields I would route to Product Ops rather than treating the agent as final authority.</p>
+        </div>
+      </div>
+
+      <div class="verification-details">
+        <article>
+          <p class="eyebrow">Where it improved</p>
+          <h3>Structure made the research more reliable.</h3>
+          <ul>
+            <li>Canonical authentication and API vocabularies removed ambiguous labels.</li>
+            <li>Field-level evidence made unsupported conclusions visible.</li>
+            <li>Explicit unknowns reduced confident guesses when sources were incomplete.</li>
+            <li>Separate checks caught missed official MCPs and existing Composio toolkits.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="eyebrow">What the final check means</p>
+          <h3>The reviewed corrections were applied completely.</h3>
+          <p>After I overlaid the reviewed records, the final 20-app sample matched the independent reference on all 200 fields. I use that as a correction-completeness check. It is not a claim that all 100 apps were manually verified.</p>
+          <p>The other 80 records are schema-validated, evidence-backed agent research. They should be refreshed as provider documentation, pricing, access rules, and MCP availability change.</p>
+        </article>
+      </div>
+
+      <div class="examples">
+        <div class="matrix-header">
+          <div>
+            <p class="eyebrow">Representative hits and misses</p>
+            <h3>What the review actually changed</h3>
+          </div>
+          <p>Examples from the frozen sample.</p>
+        </div>
+        <div class="example-grid">
+          <article>
+            <span class="example-label hit">Hit</span>
+            <h3>Composio coverage</h3>
+            <p>The second pass correctly identified existing Composio coverage for 19 of the 20 sampled apps. Read and write capability each matched 17 of 20.</p>
+          </article>
+          <article>
+            <span class="example-label miss">Miss</span>
+            <h3>Squarespace access</h3>
+            <p>The agent treated access as self-serve. The source review found OAuth registration and approval requirements, changing the verdict to Product Ops required.</p>
+          </article>
+          <article>
+            <span class="example-label miss">Miss</span>
+            <h3>SE Ranking MCP</h3>
+            <p>The agent left MCP availability unknown. The review found an official MCP and a trial access path, changing the verdict from caveat to ready now.</p>
+          </article>
+          <article>
+            <span class="example-label hit">Good restraint</span>
+            <h3>Paygent Connect</h3>
+            <p>The product identity and developer contract remained ambiguous. The agent kept the record unknown instead of merging it with a similarly named provider.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section section-dark">
+      <div class="shell">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Agent and workflow</p>
+            <h2>I used the agent for breadth and humans for judgment.</h2>
+          </div>
+          <p>The repository includes the research runner, the structured dataset, and a no-key validation mode so the work can be inspected without reproducing every model call.</p>
+        </div>
+        <ol class="workflow-grid">
+          <li><span>01</span><h3>Research</h3><p>A Luna worker searched official developer, help, pricing, and source documentation for one app at a time.</p></li>
+          <li><span>02</span><h3>Structure</h3><p>Each answer was mapped to a fixed schema covering auth, access, API breadth, events, MCP, Composio coverage, buildability, blockers, and evidence.</p></li>
+          <li><span>03</span><h3>Validate</h3><p>The pipeline rejected incomplete records, invalid categories, unsupported enum values, missing evidence, and duplicate app IDs.</p></li>
+          <li><span>04</span><h3>Review</h3><p>A separate source review checked the frozen sample. I used the misses to improve the second pass, then applied the reviewed corrections.</p></li>
+        </ol>
+        <div class="run-card">
+          <div>
+            <p class="eyebrow">Runnable proof</p>
+            <h3>Inspect the bundled dataset or research one app.</h3>
+          </div>
+          <pre><code>python research_agent.py --validate
+python research_agent.py --app "Notion"</code></pre>
+          <p>The validation command needs no credentials. A live research call reads the OpenAI key from the environment and never writes it to the output.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell conclusion">
+      <p class="eyebrow">What I would take forward</p>
+      <h2>I would turn unsupported app requests into evidence-backed readiness decisions.</h2>
+      <p>For each request, I would return the best route, the access path, the useful operations, the blocker, the confidence level, and the next owner. The outcome would be one of six paths: use an existing Composio toolkit, use a verified official MCP, use authenticated proxy execution for an uncovered endpoint, build a new toolkit, route access work to Product Ops, or defer when the evidence is insufficient.</p>
+      <p>This keeps the promise realistic. The value is not simply finding an API. It is creating a trustworthy path from user intent to an authorized, observable, repeatable external action.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <p>Prepared for the Composio AI Product Ops internship.</p>
+      <p>Research is time-bound. Every app record links back to its supporting evidence.</p>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

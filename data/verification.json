@@ -1,0 +1,34 @@
+{
+  "method": "Two apps per category: one high-risk record and one reproducibly hash-sampled record.",
+  "sample_ids": [3, 5, 15, 16, 21, 25, 33, 36, 46, 50, 52, 59, 63, 68, 71, 78, 84, 88, 95, 99],
+  "apps": 20,
+  "fields_per_app": 10,
+  "checks": 200,
+  "first_pass": {
+    "matches": 97,
+    "exact_schema_agreement": 0.485,
+    "conservative_alias_normalized_agreement": 0.535
+  },
+  "second_pass": {
+    "matches": 138,
+    "exact_schema_agreement": 0.69,
+    "percentage_point_improvement": 20.5,
+    "per_field": {
+      "authentication": 0.50,
+      "access": 0.70,
+      "api_type": 0.60,
+      "api_breadth": 0.60,
+      "read": 0.85,
+      "write": 0.85,
+      "events": 0.75,
+      "mcp": 0.55,
+      "composio": 0.95,
+      "buildability": 0.55
+    }
+  },
+  "final_overlay": {
+    "matches": 200,
+    "checks": 200,
+    "meaning": "Correction-completeness check for the 20 reviewed records only."
+  }
+}
