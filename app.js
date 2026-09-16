@@ -103,7 +103,9 @@ async function init() {
     if (requestedSection === "explorer") document.body.classList.add("capture-explorer");
     const target = requestedSection
       ? document.querySelector(`#${CSS.escape(requestedSection)}`)
-      : document.querySelector(window.location.hash);
+      : window.location.hash
+        ? document.querySelector(window.location.hash)
+        : null;
     if (target) window.setTimeout(() => target.scrollIntoView(), 50);
   } catch (error) {
     document.querySelector("#result-count").textContent = "The dataset could not be loaded. Please open this page through a local server or the deployed site.";
